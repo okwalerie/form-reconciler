@@ -29,6 +29,16 @@ A fourth difference (a missing minimum on the mitigation total) never changes wh
 
 The model translates. It never decides what is true. An earlier version asked Command A+ to draft the questions; given the same facts it was accurate in one run and wrong in the next, so drafting moved into code.
 
+## Use it on another form
+
+[`skills/check-form-logic/SKILL.md`](skills/check-form-logic/SKILL.md) packages the method as a skill an agent (or a person) can follow on any script-driven fillable PDF: triage the form, inventory both sources, write a field-to-cell mapping, check every input, state facts, test the guide's claims, and hand the owner questions, never a verdict.
+
+```bash
+uv run python inspect_sources.py form.pdf calculator.xlsx SHEET     # what's in each source
+# write mappings/<form>.py, in the shape of mappings/field_visit_risk.py
+uv run python reconcile.py --mapping mappings/<form>.py --out runs/<form>/results.json
+```
+
 ## Run it
 
 Needs [uv](https://docs.astral.sh/uv/) and Node.
@@ -62,9 +72,12 @@ Then open `http://localhost:8765/viewer/index.html`.
 | `artifacts/` | The synthetic form (PDF), spreadsheet and user guide |
 | `procedure.py` | The fictional procedure, and the reconciled rule |
 | `build_artifacts.py`, `build_guide.py` | Generate the artifacts, with the disagreements planted |
-| `reconcile.py`, `run_pdf.js`, `mapping.py` | The check |
-| `conditions.py`, `facts.py` | Exact conditions and plain facts from the full input table |
-| `owner_questions.py` | Questions for the procedure owner, English and French |
+| `skills/check-form-logic/` | The method as a reusable skill |
+| `inspect_sources.py` | Inventory of a PDF's fields and scripts and a spreadsheet's inputs and formulas |
+| `mappings/` | One file per form: which PDF field means which spreadsheet cell |
+| `reconcile.py`, `run_pdf.js` | The check |
+| `conditions.py`, `facts.py` | Exact conditions and plain facts from the full input table (helpers, plus this form's worked example) |
+| `owner_questions.py` | Questions for the procedure owner, English and French (translation helper, plus this form's questions) |
 | `results.json`, `facts.json`, `owner_questions.json` | Output of the last run |
 | `tests/answer_key.json` | What was planted. Used to check the tool; never an input |
 

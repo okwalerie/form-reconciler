@@ -8,6 +8,11 @@ translation model turns it into Canadian French, using the form's own terms.
 accurate questions in one run and inaccurate ones in another, so drafting
 stays deterministic and the model only translates.)
 
+translate() works for any form: pass it the form's own bilingual terms. The
+questions() function is the worked example for the Field Visit Risk
+Assessment; for a new form, write one question per disagreement the same way,
+pulling every number and condition from that form's facts.
+
 Usage: uv run --env-file cohere.env python owner_questions.py
 """
 
@@ -105,6 +110,7 @@ def questions(results, facts):
 
 
 def glossary():
+    """This form's bilingual terms, so the French matches what officers see."""
     lines = ["fillable PDF form = formulaire PDF à remplir", "spreadsheet = chiffrier",
              "Overall risk = Risque global", "uncertainty level = niveau d'incertitude",
              "single critical factor warning = avertissement de facteur critique unique",
@@ -120,11 +126,11 @@ def glossary():
     return "\n".join(lines)
 
 
-def translate(co, text):
+def translate(co, text, terms=None):
     prompt = (
         "Translate the following text into Canadian French for a Government of Canada program manager. "
         "Follow Translation Bureau (TERMIUM Plus) usage, not France French. Use these terms exactly:\n"
-        f"{glossary()}\n\nReply with the translation only.\n\nText:\n{text}"
+        f"{terms if terms is not None else glossary()}\n\nReply with the translation only.\n\nText:\n{text}"
     )
     resp = co.chat(model=TRANSLATE_MODEL, messages=[{"role": "user", "content": prompt}], temperature=0)
     return next(c.text for c in resp.message.content if c.type == "text").strip()

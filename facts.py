@@ -3,30 +3,42 @@
 These are what the model is allowed to phrase. They come from running the
 artifacts, not from reading their code, so the model never has to work out
 what a script or formula does.
+
+The helpers (load, column, additive, effective_weights, plus conditions.explain)
+work for any form with a mapping file. main() is the worked example for the
+Field Visit Risk Assessment: for a new form, write a short script like it that
+states one fact per disagreement reconcile.py found.
 """
 
 import json
 
 import numpy as np
 
+import reconcile as R
 from conditions import all_inputs, explain
-from mapping import CELLS, INPUTS
-from procedure import FACTORS
-from reconcile import PDF, XLSX, eval_xlsx_all, extract_pdf, norm, run_pdf
+from reconcile import eval_xlsx_all, extract_pdf, norm, run_pdf
 
 
-def load():
-    form = extract_pdf(PDF)
-    factors = list(INPUTS)
+def load(mapping=R.DEFAULT_MAPPING):
+    """Run both artifacts on every input and keep every mapped value."""
+    R.configure(mapping)
+    form = extract_pdf(R.PDF)
+    factors = list(R.INPUTS)
     export = {f: {d.split(" / ")[0]: e for e, d in form["fields"][f]["options"]} for f in factors}
     domains = {f: list(export[f]) for f in factors}
     rows = all_inputs(domains, factors)
-    compared = list(CELLS)
+    compared = list(R.CELLS)
     pdf = run_pdf(form, [{f: export[f][v] for f, v in zip(factors, r)} for r in rows], compared)
-    xlsx = eval_xlsx_all([list(r) for r in rows], [CELLS[f] for f in compared])
+    xlsx = eval_xlsx_all([list(r) for r in rows], [R.CELLS[f] for f in compared])
     col = {f: k for k, f in enumerate(compared)}
-    names = {f: next(en for fid, _c, en, *_ in FACTORS if f == f"opt_{fid}") for f in factors}
-    scores = np.array([[float(export[f][v]) for f, v in zip(factors, r)] for r in rows])
+    names = {f: R.NAMES.get(f, f) for f in factors}
+
+    def score(x):
+        try:
+            return float(x)
+        except ValueError:
+            return np.nan  # answers without a numeric value can't be fitted as weights
+    scores = np.array([[score(export[f][v]) for f, v in zip(factors, r)] for r in rows])
     return dict(form=form, factors=factors, domains=domains, rows=rows, pdf=pdf, xlsx=xlsx,
                 col=col, names=names, scores=scores)
 
@@ -115,7 +127,7 @@ def main():
     # Check the product claim rather than asserting it.
     sec = {}
     for s in "LCM":
-        fields = [f"unc_{fid}" for fid, *_ in FACTORS if fid.startswith(s)]
+        fields = [f for f in d["col"] if f.startswith(f"unc_{s}")]
         sec[s] = np.sum([np.array(column(d, "pdf", f), dtype=float) for f in fields], axis=0)
     facts["unc_total"]["form_score_is_product_of_section_sums"] = bool(np.allclose(
         sec["L"] * sec["C"] * sec["M"], np.array(column(d, "pdf", "unc_total"), dtype=float)))

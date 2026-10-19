@@ -4,7 +4,8 @@
 2. Run both, as-is, on every possible combination of answers.
 3. Report where they disagree, which script or formula causes it, and exactly when.
 
-Usage: uv run python reconcile.py [SAMPLE_SIZE]   (default: every possible input)
+Usage: uv run python reconcile.py [--mapping mappings/<form>.py] [--out results.json] [SAMPLE_SIZE]
+       (default mapping: the Field Visit Risk Assessment; default: every possible input)
 """
 
 import gzip
@@ -24,14 +25,34 @@ import numpy as np
 import pikepdf
 from openpyxl import load_workbook
 
-from conditions import all_inputs, explain
-from mapping import CELLS, INPUTS, OUTPUT_LABELS, OUTPUTS
-from procedure import FACTORS
+import importlib.util
 
-PDF = "artifacts/field-visit-risk-assessment.pdf"
-XLSX = "artifacts/risk-factor-values.xlsx"
-SHEET = "Assessment"
-BOOK = "risk-factor-values.xlsx"
+from conditions import all_inputs, explain
+
+DEFAULT_MAPPING = "mappings/field_visit_risk.py"
+
+# Set by configure() from a mapping file (see mappings/).
+PDF = XLSX = SHEET = BOOK = None
+INPUTS, CELLS, NAMES, OUTPUTS, OUTPUT_LABELS = {}, {}, {}, [], {}
+
+
+def load_mapping(path):
+    spec = importlib.util.spec_from_file_location("form_mapping", path)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def configure(path=DEFAULT_MAPPING):
+    """Point the check at one form: its PDF, spreadsheet and field-to-cell mapping."""
+    global PDF, XLSX, SHEET, BOOK, INPUTS, CELLS, NAMES, OUTPUTS, OUTPUT_LABELS
+    m = load_mapping(path)
+    PDF, XLSX, SHEET = m.PDF, m.XLSX, m.SHEET
+    BOOK = os.path.basename(XLSX)
+    INPUTS, CELLS, OUTPUTS = m.INPUTS, m.CELLS, m.OUTPUTS
+    NAMES = getattr(m, "NAMES", {})
+    OUTPUT_LABELS = getattr(m, "OUTPUT_LABELS", {o: o for o in OUTPUTS})
+    return m
 
 
 # --- Extraction ------------------------------------------------------------
@@ -76,8 +97,8 @@ def extract_pdf(path):
     }
 
 
-def extract_xlsx(path):
-    ws = load_workbook(path)[SHEET]
+def extract_xlsx(path, sheet=None):
+    ws = load_workbook(path)[sheet or SHEET]
     cells = {}
     for row in ws.iter_rows():
         for c in row:
@@ -152,7 +173,10 @@ def root_causes(field, diverges, form, seen=None):
 
 def eval_xlsx_all(xlsx_inputs, output_cells, workers=os.cpu_count()):
     """Run the spreadsheet on every input, in parallel, cached by file content."""
-    digest = hashlib.sha256(open(XLSX, "rb").read()).hexdigest()[:16]
+    # Key on the file and on which cells are read, so a different mapping never reuses stale columns.
+    key = hashlib.sha256(open(XLSX, "rb").read())
+    key.update(json.dumps([list(INPUTS.values()), output_cells]).encode())
+    digest = key.hexdigest()[:16]
     cache = f"results/xlsx-{digest}-{len(xlsx_inputs)}.json.gz"
     if os.path.exists(cache):
         with gzip.open(cache, "rt") as f:
@@ -178,7 +202,8 @@ def _run_xlsx_chunk(chunk):
     return [[norm(v) for v in _xlsx_fn(x)] for x in chunk]
 
 
-def main(sample=None, seed=7):
+def main(sample=None, seed=7, mapping=DEFAULT_MAPPING, out="results.json"):
+    configure(mapping)
     form = extract_pdf(PDF)
     sheet = extract_xlsx(XLSX)
 
@@ -229,7 +254,7 @@ def main(sample=None, seed=7):
                 for c in root_causes(o, d, form):
                     cause_mask[(c, o)][i] = True
 
-    names = {f: next(en for fid, _c, en, *_ in FACTORS if f == f"opt_{fid}") for f in factors}
+    names = {f: NAMES.get(f, f) for f in factors}
     results = {"n_inputs": n, "exhaustive": not sample, "outputs": {}, "causes": [], "latent": []}
     print(f"\nOf {what} assessments, the PDF and the spreadsheet disagree on:")
     for o in OUTPUTS:
@@ -294,11 +319,19 @@ def main(sample=None, seed=7):
         print(f"\n- PDF field '{cause}' vs {SHEET}!{CELLS[cause]}: {int(mask.sum()):,} inputs")
         print(f"  exactly when: {cond['text']}" if cond["exact"] else f"  depends on: {cond['depends_on']}")
 
-    with open("results.json", "w") as fh:
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+    with open(out, "w") as fh:
         json.dump(results, fh, indent=2, default=str)
-    print("\nWrote results.json")
+    print(f"\nWrote {out}")
 
 
 if __name__ == "__main__":
-    # No argument: every possible input. A number: a random sample of that size.
-    main(int(sys.argv[1]) if len(sys.argv) > 1 else None)
+    args = sys.argv[1:]
+    opts = {"--mapping": DEFAULT_MAPPING, "--out": "results.json"}
+    for flag in opts:
+        if flag in args:
+            i = args.index(flag)
+            opts[flag] = args[i + 1]
+            del args[i:i + 2]
+    # No number: every possible input. A number: a random sample of that size.
+    main(int(args[0]) if args else None, mapping=opts["--mapping"], out=opts["--out"])
