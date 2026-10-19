@@ -1,0 +1,764 @@
+{
+  "n_inputs": 262144,
+  "exhaustive": true,
+  "outputs": {
+    "band": {
+      "label": "Overall risk",
+      "diverging": 103374,
+      "share": 0.39434051513671875
+    },
+    "unc_level": {
+      "label": "Uncertainty level",
+      "diverging": 27967,
+      "share": 0.10668563842773438
+    },
+    "warning": {
+      "label": "Critical-factor warning",
+      "diverging": 98304,
+      "share": 0.375
+    },
+    "approval": {
+      "label": "Supervisor approval required",
+      "diverging": 77851,
+      "share": 0.2969779968261719
+    }
+  },
+  "causes": [
+    {
+      "pdf_field": "warning",
+      "hidden": false,
+      "disguised": false,
+      "pdf_script": "var w = this.getField(\"opt_L1\").value == \"10\";\n// Region B: hazardous materials warning from 'Possible' up\nif (Number(this.getField(\"opt_C1\").value) >= 3) w = true;\nevent.value = w ? \"WARNING / AVERTISSEMENT\" : \"\";",
+      "spreadsheet_cell": "Assessment!I22",
+      "spreadsheet_formula": "=IF(SUM(K4:K12)>0,\"WARNING\",\"\")",
+      "own_value_differs_on": 98304,
+      "effects": [
+        {
+          "output": "Critical-factor warning",
+          "inputs": 98304,
+          "share": 0.375,
+          "when": {
+            "exact": true,
+            "text": "Prior hostile contact at site is not Confirmed and Hazardous materials on site is Possible or Likely",
+            "rules": [
+              {
+                "box": {
+                  "opt_L1": [
+                    "None known",
+                    "Possible",
+                    "Likely"
+                  ],
+                  "opt_L2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_L3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C1": [
+                    "Possible",
+                    "Likely"
+                  ],
+                  "opt_C2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_M1": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M2": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M3": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ]
+                }
+              }
+            ]
+          },
+          "example": {
+            "answers": {
+              "Prior hostile contact at site": "None known",
+              "Remote or hard-to-reach site": "None known",
+              "Working alone": "None known",
+              "Hazardous materials on site": "Possible",
+              "Distance to medical help": "None known",
+              "Severe weather": "None known",
+              "Check-in plan": "In place and tested",
+              "Second person attending": "In place and tested",
+              "Satellite communicator": "In place and tested"
+            },
+            "pdf": {
+              "band": "Low",
+              "unc_level": "Medium",
+              "warning": "WARNING / AVERTISSEMENT",
+              "approval": "Yes / Oui"
+            },
+            "spreadsheet": {
+              "band": "Low",
+              "unc_level": "Medium",
+              "warning": "",
+              "approval": "No"
+            }
+          }
+        },
+        {
+          "output": "Supervisor approval required",
+          "inputs": 76828,
+          "share": 0.2930755615234375,
+          "when": {
+            "exact": false,
+            "depends_on": [
+              "Prior hostile contact at site",
+              "Remote or hard-to-reach site",
+              "Working alone",
+              "Hazardous materials on site",
+              "Distance to medical help",
+              "Severe weather",
+              "Check-in plan",
+              "Second person attending",
+              "Satellite communicator"
+            ],
+            "text": "(Prior hostile contact at site is not Confirmed and Hazardous materials on site is Possible or Likely and Check-in plan is not None) OR (Prior hostile contact at site is not Confirmed and Hazardous materials on site is Possible or Likely and Check-in plan is None)",
+            "rules": [
+              {
+                "box": {
+                  "opt_L1": [
+                    "None known",
+                    "Possible",
+                    "Likely"
+                  ],
+                  "opt_L2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_L3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C1": [
+                    "Possible",
+                    "Likely"
+                  ],
+                  "opt_C2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_M1": [
+                    "In place and tested",
+                    "In place",
+                    "Informal"
+                  ],
+                  "opt_M2": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M3": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ]
+                },
+                "precision": 0.8735080295138888,
+                "coverage": 0.8382620919456448,
+                "text": "Prior hostile contact at site is not Confirmed and Hazardous materials on site is Possible or Likely and Check-in plan is not None"
+              },
+              {
+                "box": {
+                  "opt_L1": [
+                    "None known",
+                    "Possible",
+                    "Likely"
+                  ],
+                  "opt_L2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_L3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C1": [
+                    "Possible",
+                    "Likely"
+                  ],
+                  "opt_C2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_M1": [
+                    "None"
+                  ],
+                  "opt_M2": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M3": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ]
+                },
+                "precision": 0.505615234375,
+                "coverage": 0.16173790805435517,
+                "text": "Prior hostile contact at site is not Confirmed and Hazardous materials on site is Possible or Likely and Check-in plan is None"
+              }
+            ]
+          },
+          "example": {
+            "answers": {
+              "Prior hostile contact at site": "None known",
+              "Remote or hard-to-reach site": "None known",
+              "Working alone": "None known",
+              "Hazardous materials on site": "Possible",
+              "Distance to medical help": "None known",
+              "Severe weather": "None known",
+              "Check-in plan": "In place and tested",
+              "Second person attending": "In place and tested",
+              "Satellite communicator": "In place and tested"
+            },
+            "pdf": {
+              "band": "Low",
+              "unc_level": "Medium",
+              "warning": "WARNING / AVERTISSEMENT",
+              "approval": "Yes / Oui"
+            },
+            "spreadsheet": {
+              "band": "Low",
+              "unc_level": "Medium",
+              "warning": "",
+              "approval": "No"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pdf_field": "zz_L",
+      "hidden": false,
+      "disguised": true,
+      "pdf_script": "// L subtotal (weights per 2016 table)\nvar s = 0;\ns += this.getField(\"opt_L1\").value * 1;\ns += this.getField(\"opt_L2\").value * 3;\ns += this.getField(\"opt_L3\").value * 5;\nevent.value = s;",
+      "spreadsheet_cell": "Assessment!I14",
+      "spreadsheet_formula": "=MAX(1,SUMIF($B$4:$B$12,\"Likelihood\",$I$4:$I$12))",
+      "own_value_differs_on": 262144,
+      "effects": [
+        {
+          "output": "Overall risk",
+          "inputs": 103374,
+          "share": 0.39434051513671875,
+          "when": {
+            "exact": false,
+            "depends_on": [
+              "Prior hostile contact at site",
+              "Remote or hard-to-reach site",
+              "Working alone",
+              "Hazardous materials on site",
+              "Distance to medical help",
+              "Severe weather",
+              "Check-in plan",
+              "Second person attending",
+              "Satellite communicator"
+            ],
+            "text": "(Prior hostile contact at site is Confirmed and Working alone is None known or Possible and Check-in plan is not In place and tested) OR (Prior hostile contact at site is Confirmed and Working alone is Likely or Confirmed and Hazardous materials on site is not None known) OR (Prior hostile contact at site is Likely and Remote or hard-to-reach site is None known or Possible and Working alone is None known or Possible)",
+            "rules": [
+              {
+                "box": {
+                  "opt_L1": [
+                    "Confirmed"
+                  ],
+                  "opt_L2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_L3": [
+                    "None known",
+                    "Possible"
+                  ],
+                  "opt_C1": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_M1": [
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M2": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M3": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ]
+                },
+                "precision": 0.798828125,
+                "coverage": 0.18991235707237797,
+                "text": "Prior hostile contact at site is Confirmed and Working alone is None known or Possible and Check-in plan is not In place and tested"
+              },
+              {
+                "box": {
+                  "opt_L1": [
+                    "Confirmed"
+                  ],
+                  "opt_L2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_L3": [
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C1": [
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_M1": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M2": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M3": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ]
+                },
+                "precision": 0.62353515625,
+                "coverage": 0.14823843519647106,
+                "text": "Prior hostile contact at site is Confirmed and Working alone is Likely or Confirmed and Hazardous materials on site is not None known"
+              },
+              {
+                "box": {
+                  "opt_L1": [
+                    "Likely"
+                  ],
+                  "opt_L2": [
+                    "None known",
+                    "Possible"
+                  ],
+                  "opt_L3": [
+                    "None known",
+                    "Possible"
+                  ],
+                  "opt_C1": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_M1": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M2": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M3": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ]
+                },
+                "precision": 0.6590576171875,
+                "coverage": 0.104455665834736,
+                "text": "Prior hostile contact at site is Likely and Remote or hard-to-reach site is None known or Possible and Working alone is None known or Possible"
+              },
+              {
+                "box": {
+                  "opt_L1": [
+                    "Confirmed"
+                  ],
+                  "opt_L2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_L3": [
+                    "None known",
+                    "Possible"
+                  ],
+                  "opt_C1": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C2": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_C3": [
+                    "None known",
+                    "Possible",
+                    "Likely",
+                    "Confirmed"
+                  ],
+                  "opt_M1": [
+                    "In place and tested"
+                  ],
+                  "opt_M2": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ],
+                  "opt_M3": [
+                    "In place and tested",
+                    "In place",
+                    "Informal",
+                    "None"
+                  ]
+                },
+                "precision": 0.6021728515625,
+                "coverage": 0.047719929576102306,
+                "text": "Prior hostile contact at site is Confirmed and Working alone is None known or Possible and Check-in plan is In place and tested"
+              }
+            ]
+          },
+          "example": {
+            "answers": {
+              "Prior hostile contact at site": "None known",
+              "Remote or hard-to-reach site": "None known",
+              "Working alone": "None known",
+              "Hazardous materials on site": "None known",
+              "Distance to medical help": "Likely",
+              "Severe weather": "Possible",
+              "Check-in plan": "None",
+              "Second person attending": "None",
+              "Satellite communicator": "None"
+            },
+            "pdf": {
+              "band": "Low",
+              "unc_level": "Medium",
+              "warning": "",
+              "approval": "No / Non",
+              "zz_L": 9
+            },
+            "spreadsheet": {
+              "band": "Moderate",
+              "unc_level": "Medium",
+              "warning": "",
+              "approval": "No",
+              "zz_L": 18.0
+            }
+          }
+        },
+        {
+          "output": "Supervisor approval required",
+          "inputs": 14872,
+          "share": 0.056732177734375,
+          "when": {
+            "exact": false,
+            "depends_on": [
+              "Prior hostile contact at site",
+              "Remote or hard-to-reach site",
+              "Working alone",
+              "Hazardous materials on site",
+              "Distance to medical help",
+              "Severe weather",
+              "Check-in plan",
+              "Second person attending",
+              "Satellite communicator"
+            ],
+            "text": "",
+            "rules": []
+          },
+          "example": {
+            "answers": {
+              "Prior hostile contact at site": "None known",
+              "Remote or hard-to-reach site": "None known",
+              "Working alone": "None known",
+              "Hazardous materials on site": "Possible",
+              "Distance to medical help": "None known",
+              "Severe weather": "None known",
+              "Check-in plan": "None",
+              "Second person attending": "None",
+              "Satellite communicator": "In place"
+            },
+            "pdf": {
+              "band": "Low",
+              "unc_level": "Medium",
+              "warning": "WARNING / AVERTISSEMENT",
+              "approval": "Yes / Oui",
+              "zz_L": 9
+            },
+            "spreadsheet": {
+              "band": "Moderate",
+              "unc_level": "Medium",
+              "warning": "",
+              "approval": "No",
+              "zz_L": 18.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pdf_field": "unc_total",
+      "hidden": true,
+      "disguised": false,
+      "pdf_script": "event.value = sumFields(this, [\"unc_L1\", \"unc_L2\", \"unc_L3\"]) * sumFields(this, [\"unc_C1\", \"unc_C2\", \"unc_C3\"]) * sumFields(this, [\"unc_M1\", \"unc_M2\", \"unc_M3\"]);",
+      "spreadsheet_cell": "Assessment!I20",
+      "spreadsheet_formula": "=SUM(J4:J12)",
+      "own_value_differs_on": 262144,
+      "effects": [
+        {
+          "output": "Uncertainty level",
+          "inputs": 27967,
+          "share": 0.10668563842773438,
+          "when": {
+            "exact": false,
+            "depends_on": [
+              "Prior hostile contact at site",
+              "Remote or hard-to-reach site",
+              "Working alone",
+              "Hazardous materials on site",
+              "Distance to medical help",
+              "Severe weather",
+              "Check-in plan",
+              "Second person attending",
+              "Satellite communicator"
+            ],
+            "text": "",
+            "rules": []
+          },
+          "example": {
+            "answers": {
+              "Prior hostile contact at site": "None known",
+              "Remote or hard-to-reach site": "None known",
+              "Working alone": "None known",
+              "Hazardous materials on site": "None known",
+              "Distance to medical help": "None known",
+              "Severe weather": "None known",
+              "Check-in plan": "In place",
+              "Second person attending": "In place and tested",
+              "Satellite communicator": "In place"
+            },
+            "pdf": {
+              "band": "Low",
+              "unc_level": "High",
+              "warning": "",
+              "approval": "No / Non",
+              "unc_total": 21168
+            },
+            "spreadsheet": {
+              "band": "Low",
+              "unc_level": "Medium",
+              "warning": "",
+              "approval": "No",
+              "unc_total": 85.0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "latent": [
+    {
+      "pdf_field": "sub_M",
+      "inputs": 4096,
+      "when": {
+        "exact": true,
+        "text": "Check-in plan is In place and tested and Second person attending is In place and tested and Satellite communicator is In place and tested",
+        "rules": [
+          {
+            "box": {
+              "opt_L1": [
+                "None known",
+                "Possible",
+                "Likely",
+                "Confirmed"
+              ],
+              "opt_L2": [
+                "None known",
+                "Possible",
+                "Likely",
+                "Confirmed"
+              ],
+              "opt_L3": [
+                "None known",
+                "Possible",
+                "Likely",
+                "Confirmed"
+              ],
+              "opt_C1": [
+                "None known",
+                "Possible",
+                "Likely",
+                "Confirmed"
+              ],
+              "opt_C2": [
+                "None known",
+                "Possible",
+                "Likely",
+                "Confirmed"
+              ],
+              "opt_C3": [
+                "None known",
+                "Possible",
+                "Likely",
+                "Confirmed"
+              ],
+              "opt_M1": [
+                "In place and tested"
+              ],
+              "opt_M2": [
+                "In place and tested"
+              ],
+              "opt_M3": [
+                "In place and tested"
+              ]
+            }
+          }
+        ]
+      },
+      "pdf_script": "event.value = sumFields(this, [\"risk_M1\", \"risk_M2\", \"risk_M3\"]);",
+      "spreadsheet_cell": "Assessment!I16",
+      "spreadsheet_formula": "=MAX(1,SUMIF($B$4:$B$12,\"Mitigation\",$I$4:$I$12))",
+      "example": {
+        "answers": {
+          "Prior hostile contact at site": "None known",
+          "Remote or hard-to-reach site": "None known",
+          "Working alone": "None known",
+          "Hazardous materials on site": "None known",
+          "Distance to medical help": "None known",
+          "Severe weather": "None known",
+          "Check-in plan": "In place and tested",
+          "Second person attending": "In place and tested",
+          "Satellite communicator": "In place and tested"
+        },
+        "pdf": {
+          "band": "Low",
+          "unc_level": "Medium",
+          "warning": "",
+          "approval": "No / Non",
+          "sub_M": 0
+        },
+        "spreadsheet": {
+          "band": "Low",
+          "unc_level": "Medium",
+          "warning": "",
+          "approval": "No",
+          "sub_M": 1.0
+        }
+      }
+    }
+  ]
+}

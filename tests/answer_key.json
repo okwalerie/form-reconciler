@@ -1,0 +1,36 @@
+{
+  "_about": "What was planted in the synthetic artifacts. Used to grade a reconciliation run; never shown to the model.",
+  "pdf_vs_spreadsheet": [
+    {"id": "P1", "pdf_field": "zz_L", "kind": "stale constant in a disguised field",
+     "detail": "White-text margin field recomputes the likelihood subtotal with weight 1 for 'Prior hostile contact'; the total reads it. Spreadsheet uses 10.",
+     "visible_effect": ["band", "approval"]},
+    {"id": "P2", "pdf_field": "warning", "kind": "widened rule",
+     "detail": "Hazardous materials warns from 'Possible' up; spreadsheet warns only at the highest answer of a Critical factor.",
+     "visible_effect": ["warning", "approval"]},
+    {"id": "P3", "pdf_field": "unc_total", "kind": "wrong aggregation",
+     "detail": "PDF multiplies the three uncertainty subtotals (with its own thresholds); spreadsheet sums the rows.",
+     "visible_effect": ["unc_level"]},
+    {"id": "P4", "pdf_field": "sub_M", "kind": "missing floor (latent)",
+     "detail": "PDF mitigation subtotal can be 0; spreadsheet applies MAX(1, ...). Never changes a visible result.",
+     "visible_effect": []}
+  ],
+  "guide_claims": [
+    {"id": "G1", "where": "Table 1", "claim": "Prior hostile contact is weighted Critical (10).",
+     "agrees_with": ["spreadsheet", "pdf visible weight"], "contradicts": ["pdf calculation (P1)"], "kind": "testable"},
+    {"id": "G2", "where": "Section 5, Single critical factor",
+     "claim": "Warning if the highest answer is selected for any Critical factor.",
+     "agrees_with": ["spreadsheet"], "contradicts": ["pdf (P2)", "guide G3"], "kind": "testable"},
+    {"id": "G3", "where": "Section 3, Hazardous materials note",
+     "claim": "Any indication of hazardous materials (Possible or higher) displays the warning.",
+     "agrees_with": ["pdf"], "contradicts": ["spreadsheet", "guide G2"], "kind": "testable; guide contradicts itself"},
+    {"id": "G4", "where": "Section 5, Supervisor approval",
+     "claim": "Approval required if the warning is displayed or overall risk is High or Extreme.",
+     "agrees_with": ["pdf", "spreadsheet"], "contradicts": [], "kind": "testable; consistent"},
+    {"id": "G5", "where": "Section 5, Overall risk",
+     "claim": "Overall risk is calculated from the three sections; mitigation lowers it.",
+     "agrees_with": [], "contradicts": [], "kind": "underspecified: no formula, no thresholds, silent on the minimum subtotal (P4)"},
+    {"id": "G6", "where": "Section 5, Uncertainty level",
+     "claim": "Uncertainty level reflects unconfirmed information; Confirmed least, Possible most.",
+     "agrees_with": ["pdf", "spreadsheet"], "contradicts": [], "kind": "partly testable: option ordering checks out, but no formula or thresholds, so it cannot settle P3"}
+  ]
+}

@@ -1,0 +1,656 @@
+%PDF-1.3
+%¿÷¢ş
+1 0 obj
+<< /AcroForm 3 0 R /Names << /JavaScript << /Names [ (helpers) 4 0 R ] >> >> /PageMode /UseNone /Pages 5 0 R /Type /Catalog >>
+endobj
+2 0 obj
+<< /Author (anonymous) /CreationDate (D:20261018194250-06'00') /Creator (anonymous) /Keywords () /ModDate (D:20261018194250-06'00') /Producer (ReportLab PDF Library - \(opensource\)) /Subject (unspecified) /Title (Field Visit Risk Assessment / Évaluation des risques de visite sur le terrain) /Trapped /False >>
+endobj
+3 0 obj
+<< /CO [ 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R ] /DA (/Helv 0 Tf 0 g) /DR << /Encoding << /RLAFencoding 34 0 R >> /Font << /Helv 35 0 R >> >> /Fields [ 36 0 R 6 0 R 7 0 R 37 0 R 8 0 R 9 0 R 38 0 R 10 0 R 11 0 R 25 0 R 39 0 R 12 0 R 13 0 R 40 0 R 14 0 R 15 0 R 41 0 R 16 0 R 17 0 R 26 0 R 42 0 R 18 0 R 19 0 R 43 0 R 20 0 R 21 0 R 44 0 R 22 0 R 23 0 R 27 0 R 29 0 R 31 0 R 32 0 R 33 0 R 28 0 R 30 0 R 24 0 R ] /NeedAppearances true >>
+endobj
+4 0 obj
+<< /JS (// Shared helpers. Added 2016, see calc order if totals look wrong.\nvar UNC = {"0": 1, "1": 2, "3": 3, "6": 2, "10": 1};\nfunction sumFields\(doc, names\) {\n  var s = 0;\n  for \(var i = 0; i < names.length; i++\) s += Number\(doc.getField\(names[i]\).value\);\n  return s;\n}\n) /S /JavaScript >>
+endobj
+5 0 obj
+<< /Count 1 /Kids [ 45 0 R ] /Type /Pages >>
+endobj
+6 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_L1"\).value\) * 10;) /S /JavaScript >> >> /AP << /N 46 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 640 550 652 ] /Subtype /Widget /T (risk_L1) /Type /Annot /V () >>
+endobj
+7 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_L1"\).value] * 10;) /S /JavaScript >> >> /AP << /N 47 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 628 550 640 ] /Subtype /Widget /T (unc_L1) /Type /Annot /V () >>
+endobj
+8 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_L2"\).value\) * 3;) /S /JavaScript >> >> /AP << /N 48 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 614 550 626 ] /Subtype /Widget /T (risk_L2) /Type /Annot /V () >>
+endobj
+9 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_L2"\).value] * 3;) /S /JavaScript >> >> /AP << /N 49 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 602 550 614 ] /Subtype /Widget /T (unc_L2) /Type /Annot /V () >>
+endobj
+10 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_L3"\).value\) * 5;) /S /JavaScript >> >> /AP << /N 50 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 588 550 600 ] /Subtype /Widget /T (risk_L3) /Type /Annot /V () >>
+endobj
+11 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_L3"\).value] * 5;) /S /JavaScript >> >> /AP << /N 51 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 576 550 588 ] /Subtype /Widget /T (unc_L3) /Type /Annot /V () >>
+endobj
+12 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_C1"\).value\) * 10;) /S /JavaScript >> >> /AP << /N 52 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 536 550 548 ] /Subtype /Widget /T (risk_C1) /Type /Annot /V () >>
+endobj
+13 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_C1"\).value] * 10;) /S /JavaScript >> >> /AP << /N 53 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 524 550 536 ] /Subtype /Widget /T (unc_C1) /Type /Annot /V () >>
+endobj
+14 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_C2"\).value\) * 3;) /S /JavaScript >> >> /AP << /N 54 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 510 550 522 ] /Subtype /Widget /T (risk_C2) /Type /Annot /V () >>
+endobj
+15 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_C2"\).value] * 3;) /S /JavaScript >> >> /AP << /N 55 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 498 550 510 ] /Subtype /Widget /T (unc_C2) /Type /Annot /V () >>
+endobj
+16 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_C3"\).value\) * 1;) /S /JavaScript >> >> /AP << /N 56 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 484 550 496 ] /Subtype /Widget /T (risk_C3) /Type /Annot /V () >>
+endobj
+17 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_C3"\).value] * 1;) /S /JavaScript >> >> /AP << /N 57 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 472 550 484 ] /Subtype /Widget /T (unc_C3) /Type /Annot /V () >>
+endobj
+18 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_M1"\).value\) * 5;) /S /JavaScript >> >> /AP << /N 58 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 432 550 444 ] /Subtype /Widget /T (risk_M1) /Type /Annot /V () >>
+endobj
+19 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_M1"\).value] * 5;) /S /JavaScript >> >> /AP << /N 59 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 420 550 432 ] /Subtype /Widget /T (unc_M1) /Type /Annot /V () >>
+endobj
+20 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_M2"\).value\) * 3;) /S /JavaScript >> >> /AP << /N 60 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 406 550 418 ] /Subtype /Widget /T (risk_M2) /Type /Annot /V () >>
+endobj
+21 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_M2"\).value] * 3;) /S /JavaScript >> >> /AP << /N 61 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 394 550 406 ] /Subtype /Widget /T (unc_M2) /Type /Annot /V () >>
+endobj
+22 0 obj
+<< /AA << /C << /JS (event.value = Number\(this.getField\("opt_M3"\).value\) * 1;) /S /JavaScript >> >> /AP << /N 62 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 380 550 392 ] /Subtype /Widget /T (risk_M3) /Type /Annot /V () >>
+endobj
+23 0 obj
+<< /AA << /C << /JS (event.value = UNC[this.getField\("opt_M3"\).value] * 1;) /S /JavaScript >> >> /AP << /N 63 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 368 550 380 ] /Subtype /Widget /T (unc_M3) /Type /Annot /V () >>
+endobj
+24 0 obj
+<< /AA << /C << /JS (// L subtotal \(weights per 2016 table\)\nvar s = 0;\ns += this.getField\("opt_L1"\).value * 1;\ns += this.getField\("opt_L2"\).value * 3;\ns += this.getField\("opt_L3"\).value * 5;\nevent.value = s;) /S /JavaScript >> >> /AP << /N 64 0 R >> /DA (/Helv 6 Tf 1 1 1 rg) /DV () /F 4 /FT /Tx /Ff 1 /MK << /BG [ 1 1 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 6 462 36 472 ] /Subtype /Widget /T (zz_L) /Type /Annot /V () >>
+endobj
+25 0 obj
+<< /AA << /C << /JS (event.value = sumFields\(this, ["risk_L1", "risk_L2", "risk_L3"]\);) /S /JavaScript >> >> /AP << /N 65 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 562 550 574 ] /Subtype /Widget /T (sub_L) /Type /Annot /V () >>
+endobj
+26 0 obj
+<< /AA << /C << /JS (event.value = sumFields\(this, ["risk_C1", "risk_C2", "risk_C3"]\);) /S /JavaScript >> >> /AP << /N 66 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 458 550 470 ] /Subtype /Widget /T (sub_C) /Type /Annot /V () >>
+endobj
+27 0 obj
+<< /AA << /C << /JS (event.value = sumFields\(this, ["risk_M1", "risk_M2", "risk_M3"]\);) /S /JavaScript >> >> /AP << /N 67 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 354 550 366 ] /Subtype /Widget /T (sub_M) /Type /Annot /V () >>
+endobj
+28 0 obj
+<< /AA << /C << /JS (event.value = this.getField\("zz_L"\).value * this.getField\("sub_C"\).value * this.getField\("sub_M"\).value;) /S /JavaScript >> >> /AP << /N 68 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 272 550 284 ] /Subtype /Widget /T (total_risk) /Type /Annot /V () >>
+endobj
+29 0 obj
+<< /AA << /C << /JS (var t = Number\(this.getField\("total_risk"\).value\);\nif \(t < 50000\) event.value = "Low";\nelse if \(t < 300000\) event.value = "Moderate";\nelse if \(t < 1000000\) event.value = "High";\nelse event.value = "Extreme";) /S /JavaScript >> >> /AP << /N 69 0 R >> /DA (/Helv 8 Tf .1 .1 .1 rg) /DV () /F 4 /FT /Tx /Ff 1 /MK << /BG [ .960784 .960784 .960784 ] >> /MaxLen 100 /P 45 0 R /Rect [ 330 336 510 352 ] /Subtype /Widget /T (band) /Type /Annot /V () >>
+endobj
+30 0 obj
+<< /AA << /C << /JS (event.value = sumFields\(this, ["unc_L1", "unc_L2", "unc_L3"]\) * sumFields\(this, ["unc_C1", "unc_C2", "unc_C3"]\) * sumFields\(this, ["unc_M1", "unc_M2", "unc_M3"]\);) /S /JavaScript >> >> /AP << /N 70 0 R >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV () /F 2 /FT /Tx /Ff 1 /MK << /BG [ .8 .843 1 ] >> /MaxLen 100 /P 45 0 R /Rect [ 520 294 550 306 ] /Subtype /Widget /T (unc_total) /Type /Annot /V () >>
+endobj
+31 0 obj
+<< /AA << /C << /JS (var t = Number\(this.getField\("unc_total"\).value\);\nif \(t < 6000\) event.value = "Low";\nelse if \(t < 21000\) event.value = "Medium";\nelse event.value = "High";) /S /JavaScript >> >> /AP << /N 71 0 R >> /DA (/Helv 8 Tf .1 .1 .1 rg) /DV () /F 4 /FT /Tx /Ff 1 /MK << /BG [ .960784 .960784 .960784 ] >> /MaxLen 100 /P 45 0 R /Rect [ 330 314 510 330 ] /Subtype /Widget /T (unc_level) /Type /Annot /V () >>
+endobj
+32 0 obj
+<< /AA << /C << /JS (var w = this.getField\("opt_L1"\).value == "10";\n// Region B: hazardous materials warning from 'Possible' up\nif \(Number\(this.getField\("opt_C1"\).value\) >= 3\) w = true;\nevent.value = w ? "WARNING / AVERTISSEMENT" : "";) /S /JavaScript >> >> /AP << /N 72 0 R >> /DA (/Helv 8 Tf .1 .1 .1 rg) /DV () /F 4 /FT /Tx /Ff 1 /MK << /BG [ .960784 .960784 .960784 ] >> /MaxLen 100 /P 45 0 R /Rect [ 330 292 510 308 ] /Subtype /Widget /T (warning) /Type /Annot /V () >>
+endobj
+33 0 obj
+<< /AA << /C << /JS (var b = this.getField\("band"\).value;\nvar w = this.getField\("warning"\).value != "";\nevent.value = \(w || b == "High" || b == "Extreme"\) ? "Yes / Oui" : "No / Non";) /S /JavaScript >> >> /AP << /N 73 0 R >> /DA (/Helv 8 Tf .1 .1 .1 rg) /DV () /F 4 /FT /Tx /Ff 1 /MK << /BG [ .960784 .960784 .960784 ] >> /MaxLen 100 /P 45 0 R /Rect [ 330 270 510 286 ] /Subtype /Widget /T (approval) /Type /Annot /V () >>
+endobj
+34 0 obj
+<< /Differences [ 24 /breve /caron /circumflex /dotaccent /hungarumlaut /ogonek /ring /tilde 39 /quotesingle 96 /grave 128 /bullet /dagger /daggerdbl /ellipsis /emdash /endash /florin /fraction /guilsinglleft /guilsinglright /minus /perthousand /quotedblbase /quotedblleft /quotedblright /quoteleft /quoteright /quotesinglbase /trademark /fi /fl /Lslash /OE /Scaron /Ydieresis /Zcaron /dotlessi /lslash /oe /scaron /zcaron 160 /Euro 164 /currency 166 /brokenbar 168 /dieresis /copyright /ordfeminine 172 /logicalnot /.notdef /registered /macron /degree /plusminus /twosuperior /threesuperior /acute /mu 183 /periodcentered /cedilla /onesuperior /ordmasculine 188 /onequarter /onehalf /threequarters 192 /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls /agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla /egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis /eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide /oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis ] /Type /Encoding >>
+endobj
+35 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+36 0 obj
+<< /AP << /N 74 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (1) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (1) (None known / Aucun connu) ] [ (3) (Possible / Possible) ] [ (6) (Likely / Probable) ] [ (10) (Confirmed / Confirmé) ] ] /P 45 0 R /Rect [ 380 638 510 654 ] /Subtype /Widget /T (opt_L1) /Type /Annot /V (1) >>
+endobj
+37 0 obj
+<< /AP << /N 75 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (1) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (1) (None known / Aucun connu) ] [ (3) (Possible / Possible) ] [ (6) (Likely / Probable) ] [ (10) (Confirmed / Confirmé) ] ] /P 45 0 R /Rect [ 380 612 510 628 ] /Subtype /Widget /T (opt_L2) /Type /Annot /V (1) >>
+endobj
+38 0 obj
+<< /AP << /N 76 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (1) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (1) (None known / Aucun connu) ] [ (3) (Possible / Possible) ] [ (6) (Likely / Probable) ] [ (10) (Confirmed / Confirmé) ] ] /P 45 0 R /Rect [ 380 586 510 602 ] /Subtype /Widget /T (opt_L3) /Type /Annot /V (1) >>
+endobj
+39 0 obj
+<< /AP << /N 77 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (1) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (1) (None known / Aucun connu) ] [ (3) (Possible / Possible) ] [ (6) (Likely / Probable) ] [ (10) (Confirmed / Confirmé) ] ] /P 45 0 R /Rect [ 380 534 510 550 ] /Subtype /Widget /T (opt_C1) /Type /Annot /V (1) >>
+endobj
+40 0 obj
+<< /AP << /N 78 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (1) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (1) (None known / Aucun connu) ] [ (3) (Possible / Possible) ] [ (6) (Likely / Probable) ] [ (10) (Confirmed / Confirmé) ] ] /P 45 0 R /Rect [ 380 508 510 524 ] /Subtype /Widget /T (opt_C2) /Type /Annot /V (1) >>
+endobj
+41 0 obj
+<< /AP << /N 79 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (1) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (1) (None known / Aucun connu) ] [ (3) (Possible / Possible) ] [ (6) (Likely / Probable) ] [ (10) (Confirmed / Confirmé) ] ] /P 45 0 R /Rect [ 380 482 510 498 ] /Subtype /Widget /T (opt_C3) /Type /Annot /V (1) >>
+endobj
+42 0 obj
+<< /AP << /N 80 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (0) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (0) (In place and tested / En place et testé) ] [ (3) (In place / En place) ] [ (6) (Informal / Informel) ] [ (10) (None / Aucun) ] ] /P 45 0 R /Rect [ 380 430 510 446 ] /Subtype /Widget /T (opt_M1) /Type /Annot /V (0) >>
+endobj
+43 0 obj
+<< /AP << /N 81 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (0) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (0) (In place and tested / En place et testé) ] [ (3) (In place / En place) ] [ (6) (Informal / Informel) ] [ (10) (None / Aucun) ] ] /P 45 0 R /Rect [ 380 404 510 420 ] /Subtype /Widget /T (opt_M2) /Type /Annot /V (0) >>
+endobj
+44 0 obj
+<< /AP << /N 82 0 R >> /BS << /S /S /W 1 >> /DA (/Helv 7 Tf .1 .1 .1 rg) /DV (0) /F 4 /FT /Ch /Ff 131072 /I [ 0 ] /MK << /BC [ .1 .1 .1 ] /BG [ .8 .843 1 ] >> /Opt [ [ (0) (In place and tested / En place et testé) ] [ (3) (In place / En place) ] [ (6) (Informal / Informel) ] [ (10) (None / Aucun) ] ] /P 45 0 R /Rect [ 380 378 510 394 ] /Subtype /Widget /T (opt_M3) /Type /Annot /V (0) >>
+endobj
+45 0 obj
+<< /Annots [ 36 0 R 6 0 R 7 0 R 37 0 R 8 0 R 9 0 R 38 0 R 10 0 R 11 0 R 25 0 R 39 0 R 12 0 R 13 0 R 40 0 R 14 0 R 15 0 R 41 0 R 16 0 R 17 0 R 26 0 R 42 0 R 18 0 R 19 0 R 43 0 R 20 0 R 21 0 R 44 0 R 22 0 R 23 0 R 27 0 R 29 0 R 31 0 R 32 0 R 33 0 R 28 0 R 30 0 R 24 0 R ] /Contents 83 0 R /MediaBox [ 0 0 612 792 ] /Parent 5 0 R /Resources << /Font 84 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] >> /Rotate 0 /Trans << >> /Type /Page >>
+endobj
+46 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 85 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+47 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 86 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+48 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 87 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+49 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 88 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+50 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 89 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+51 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 90 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+52 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 91 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+53 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 92 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+54 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 93 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+55 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 94 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+56 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 95 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+57 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 96 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+58 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 97 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+59 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 98 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+60 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 99 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+61 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 100 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+62 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 101 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+63 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 102 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+64 0 obj
+<< /BBox [ 0 0 30 10 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 103 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 60 /Filter /FlateDecode >>
+stream
+xœ3T0T0T(Jç2P0P06P04P(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ÃµX
+endstream
+endobj
+65 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 104 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+66 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 105 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+67 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 106 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+68 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 107 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+69 0 obj
+<< /BBox [ 0 0 180 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 108 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 65 /Filter /FlateDecode >>
+stream
+xœÓ³430·0QĞC£‹Ò¹-ÍŠR¹Ò¸ôC*œ|¸
+Ñ¤Â¹ò¸@Ü¹¹\}¹ 
+endstream
+endobj
+70 0 obj
+<< /BBox [ 0 0 30 12 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 109 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 64 /Filter /FlateDecode >>
+stream
+xœÓ³PĞ³01V0T(Jç2P0P06P04R(JåJãÒ©PpòuVà*D•	çÊã2P )wç
+ärõuæ ûá-
+endstream
+endobj
+71 0 obj
+<< /BBox [ 0 0 180 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 110 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 65 /Filter /FlateDecode >>
+stream
+xœÓ³430·0QĞC£‹Ò¹-ÍŠR¹Ò¸ôC*œ|¸
+Ñ¤Â¹ò¸@Ü¹¹\}¹ 
+endstream
+endobj
+72 0 obj
+<< /BBox [ 0 0 180 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 111 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 65 /Filter /FlateDecode >>
+stream
+xœÓ³430·0QĞC£‹Ò¹-ÍŠR¹Ò¸ôC*œ|¸
+Ñ¤Â¹ò¸@Ü¹¹\}¹ 
+endstream
+endobj
+73 0 obj
+<< /BBox [ 0 0 180 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 112 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 65 /Filter /FlateDecode >>
+stream
+xœÓ³430·0QĞC£‹Ò¹-ÍŠR¹Ò¸ôC*œ|¸
+Ñ¤Â¹ò¸@Ü¹¹\}¹ 
+endstream
+endobj
+74 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 35 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 145 /Filter /FlateDecode >>
+stream
+xœMÍ
+‚P„÷ó³¬ÍõëO¶LÛz 1ÁêH†ÙãÇ­M0³ú†oLN“'1…SKK‰-%ãÔá#üåTC¸Àš”¡â¶”4lˆü›ES8:ŠË(. 3–AZ£ğˆöİíÅıŸvê!ü2	èÕaÔWeÄİÜÎÊvT×ô*#ª¦Ä‚£(¬
+endstream
+endobj
+75 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 113 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 145 /Filter /FlateDecode >>
+stream
+xœMÍ
+‚P„÷ó³¬ÍõëO¶LÛz 1ÁêH†ÙãÇ­M0³ú†oLN“'1…SKK‰-%ãÔá#üåTC¸Àš”¡â¶”4lˆü›ES8:ŠË(. 3–AZ£ğˆöİíÅıŸvê!ü2	èÕaÔWeÄİÜÎÊvT×ô*#ª¦Ä‚£(¬
+endstream
+endobj
+76 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 114 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 145 /Filter /FlateDecode >>
+stream
+xœMÍ
+‚P„÷ó³¬ÍõëO¶LÛz 1ÁêH†ÙãÇ­M0³ú†oLN“'1…SKK‰-%ãÔá#üåTC¸Àš”¡â¶”4lˆü›ES8:ŠË(. 3–AZ£ğˆöİíÅıŸvê!ü2	èÕaÔWeÄİÜÎÊvT×ô*#ª¦Ä‚£(¬
+endstream
+endobj
+77 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 115 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 145 /Filter /FlateDecode >>
+stream
+xœMÍ
+‚P„÷ó³¬ÍõëO¶LÛz 1ÁêH†ÙãÇ­M0³ú†oLN“'1…SKK‰-%ãÔá#üåTC¸Àš”¡â¶”4lˆü›ES8:ŠË(. 3–AZ£ğˆöİíÅıŸvê!ü2	èÕaÔWeÄİÜÎÊvT×ô*#ª¦Ä‚£(¬
+endstream
+endobj
+78 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 116 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 145 /Filter /FlateDecode >>
+stream
+xœMÍ
+‚P„÷ó³¬ÍõëO¶LÛz 1ÁêH†ÙãÇ­M0³ú†oLN“'1…SKK‰-%ãÔá#üåTC¸Àš”¡â¶”4lˆü›ES8:ŠË(. 3–AZ£ğˆöİíÅıŸvê!ü2	èÕaÔWeÄİÜÎÊvT×ô*#ª¦Ä‚£(¬
+endstream
+endobj
+79 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 117 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 145 /Filter /FlateDecode >>
+stream
+xœMÍ
+‚P„÷ó³¬ÍõëO¶LÛz 1ÁêH†ÙãÇ­M0³ú†oLN“'1…SKK‰-%ãÔá#üåTC¸Àš”¡â¶”4lˆü›ES8:ŠË(. 3–AZ£ğˆöİíÅıŸvê!ü2	èÕaÔWeÄİÜÎÊvT×ô*#ª¦Ä‚£(¬
+endstream
+endobj
+80 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 118 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 154 /Filter /FlateDecode >>
+stream
+xœMM‚@„ïó+æX—ußõ#»*b<]ºH®B˜”Jõóc ˜¹Ì3Ì¨”*B
+ÇššjJÂÑ¡…~u,!|A«˜Şb¶”Øw&öÍ¬Ê‰Å$ãÑ	4ıh‰Ì"Ø¹şÉíßìØA¸œ2òè†Õ~à½¯/õĞpvÓì,~©›—ğÆ²¦½¢°8 ¨r| £„.
+endstream
+endobj
+81 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 119 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 154 /Filter /FlateDecode >>
+stream
+xœMM‚@„ïó+æX—ußõ#»*b<]ºH®B˜”Jõóc ˜¹Ì3Ì¨”*B
+ÇššjJÂÑ¡…~u,!|A«˜Şb¶”Øw&öÍ¬Ê‰Å$ãÑ	4ıh‰Ì"Ø¹şÉíßìØA¸œ2òè†Õ~à½¯/õĞpvÓì,~©›—ğÆ²¦½¢°8 ¨r| £„.
+endstream
+endobj
+82 0 obj
+<< /BBox [ 0 0 130 16 ] /FormType 1 /Matrix [ 1 0 0 1 0 0 ] /Resources << /Font << /Helv 120 0 R >> /ProcSet [ /PDF /Text ] >> /Subtype /Form /Type /XObject /Length 154 /Filter /FlateDecode >>
+stream
+xœMM‚@„ïó+æX—ußõ#»*b<]ºH®B˜”Jõóc ˜¹Ì3Ì¨”*B
+ÇššjJÂÑ¡…~u,!|A«˜Şb¶”Øw&öÍ¬Ê‰Å$ãÑ	4ıh‰Ì"Ø¹şÉíßìØA¸œ2òè†Õ~à½¯/õĞpvÓì,~©›—ğÆ²¦½¢°8 ¨r| £„.
+endstream
+endobj
+83 0 obj
+<< /Length 948 /Filter /FlateDecode >>
+stream
+xœ­VÉnÛH½ç+êe I\µ 'MlÁ¼'A ]Úd‰ªQ³[înÒÎ|ı ¸ÄcË±Àx.Õ$_Õ«zµøà~}M€?/}ğH¶àG£’K8OŞÕçøa}&ç~G0H
+,	e_É’ƒÙ=,¬EkTî$CòÇOL|¯Æ^Ff5â&ôıJÈR8Ò
+2´`ÈŞ•h!C¨Ø‚-H‡ÆRÇ†¦lgö_J¡h¼0|ô_›–_W‹¡Áf`°Aàù“¡n><_fş¤Æ\¿N.Î“ÏŸ`y³ºâœ_İ\¯“Õ"ù|s=‚%¥ÌNH8Q|¥0($äºB£8„°Õ¦=w#xİÉ¼¥&R§Œo°4OaºÂĞûùÅ7¤|ç`_4eöå÷#ïñı…²÷ÈV›0öZY<öuÆ¾Î!£É¤	Ù%íQÒNëŒ­}+nI’cØãì¾52úbHØiëH"¤Z9‘:X@}Ã˜á¼ÆüÔ¢t¨BÕÂÒtš|ş×.×ñ¢ß£THØ|ïX~§˜MVVXh‡Àì…É†NŠt÷[Ä¹°¢¹è˜ªÔ”+¾]BFÛ-¥ˆì½HÓM{¶7u¿I×fT°¼Pv'xÇóFCß´Ù“ÊAH­úgÓ#1¢$Áb)ûR‰Ûª¸ |›A|LäD1Ä“ “™Å»UŠ0şÇoúÆ¦UÖ…øG˜L—
+áĞ´úIÄaÜ$L8âŒnÌBåh°´hßRqäıe·Š:#ë‡Ği(0«w(}ùzó§p<‘¬&e¡à´0pùĞ›ª½UöQ+·5VhîQ¸šì¢YØI.#I-«º¯iÀg6aØ»°£Y“†K}Ïyì]QÜ6r”7»À®vL5ËAß€uòÚaº’‚ƒ½vÆıfºHÁ»	¤º(JEioê…“ã£VEkLµÊà€ÆjÂ9T©¼/7¯©ì3,êÒ.°…TÖoQõ/ëÈ÷Şªõ°ÓZ8”’‡Ñcàu_Í‡Ónšwõøî ûÒgÑ›„¶›èM…FHÉÛîWªzé…\ê[q4ŠNAMÄÿR)'H¹ ±B	c¸¦
+E	Ù{ª’+³¾K[0o³A*çİªk×Ûggó„Y”Šúš™¶ëty@S‘ÕÄá`t%$¼+É o‹>»m:D}üd	…wÿÙñMc
+endstream
+endobj
+84 0 obj
+<< /F1 121 0 R /F2 122 0 R /F3 123 0 R >>
+endobj
+85 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+86 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+87 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+88 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+89 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+90 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+91 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+92 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+93 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+94 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+95 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+96 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+97 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+98 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+99 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+100 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+101 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+102 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+103 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+104 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+105 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+106 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+107 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+108 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+109 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+110 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+111 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+112 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+113 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+114 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+115 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+116 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+117 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+118 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+119 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+120 0 obj
+<< /BaseFont /Helvetica /Encoding 34 0 R /Name /Helv /Subtype /Type1 /Type /Font >>
+endobj
+121 0 obj
+<< /BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font >>
+endobj
+122 0 obj
+<< /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font >>
+endobj
+123 0 obj
+<< /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font >>
+endobj
+xref
+0 124
+0000000000 65535 f 
+0000000015 00000 n 
+0000000157 00000 n 
+0000000484 00000 n 
+0000001087 00000 n 
+0000001410 00000 n 
+0000001470 00000 n 
+0000001793 00000 n 
+0000002110 00000 n 
+0000002432 00000 n 
+0000002748 00000 n 
+0000003071 00000 n 
+0000003388 00000 n 
+0000003712 00000 n 
+0000004030 00000 n 
+0000004353 00000 n 
+0000004670 00000 n 
+0000004993 00000 n 
+0000005310 00000 n 
+0000005633 00000 n 
+0000005950 00000 n 
+0000006273 00000 n 
+0000006590 00000 n 
+0000006913 00000 n 
+0000007230 00000 n 
+0000007679 00000 n 
+0000008007 00000 n 
+0000008335 00000 n 
+0000008663 00000 n 
+0000009039 00000 n 
+0000009534 00000 n 
+0000009967 00000 n 
+0000010412 00000 n 
+0000010914 00000 n 
+0000011361 00000 n 
+0000012688 00000 n 
+0000012788 00000 n 
+0000013185 00000 n 
+0000013582 00000 n 
+0000013979 00000 n 
+0000014376 00000 n 
+0000014773 00000 n 
+0000015170 00000 n 
+0000015576 00000 n 
+0000015982 00000 n 
+0000016388 00000 n 
+0000016847 00000 n 
+0000017135 00000 n 
+0000017423 00000 n 
+0000017711 00000 n 
+0000017999 00000 n 
+0000018287 00000 n 
+0000018575 00000 n 
+0000018863 00000 n 
+0000019151 00000 n 
+0000019439 00000 n 
+0000019727 00000 n 
+0000020015 00000 n 
+0000020303 00000 n 
+0000020591 00000 n 
+0000020879 00000 n 
+0000021167 00000 n 
+0000021456 00000 n 
+0000021745 00000 n 
+0000022034 00000 n 
+0000022319 00000 n 
+0000022608 00000 n 
+0000022897 00000 n 
+0000023186 00000 n 
+0000023475 00000 n 
+0000023766 00000 n 
+0000024055 00000 n 
+0000024346 00000 n 
+0000024637 00000 n 
+0000024928 00000 n 
+0000025299 00000 n 
+0000025671 00000 n 
+0000026043 00000 n 
+0000026415 00000 n 
+0000026787 00000 n 
+0000027159 00000 n 
+0000027540 00000 n 
+0000027921 00000 n 
+0000028302 00000 n 
+0000029323 00000 n 
+0000029381 00000 n 
+0000029481 00000 n 
+0000029581 00000 n 
+0000029681 00000 n 
+0000029781 00000 n 
+0000029881 00000 n 
+0000029981 00000 n 
+0000030081 00000 n 
+0000030181 00000 n 
+0000030281 00000 n 
+0000030381 00000 n 
+0000030481 00000 n 
+0000030581 00000 n 
+0000030681 00000 n 
+0000030781 00000 n 
+0000030881 00000 n 
+0000030982 00000 n 
+0000031083 00000 n 
+0000031184 00000 n 
+0000031285 00000 n 
+0000031386 00000 n 
+0000031487 00000 n 
+0000031588 00000 n 
+0000031689 00000 n 
+0000031790 00000 n 
+0000031891 00000 n 
+0000031992 00000 n 
+0000032093 00000 n 
+0000032194 00000 n 
+0000032295 00000 n 
+0000032396 00000 n 
+0000032497 00000 n 
+0000032598 00000 n 
+0000032699 00000 n 
+0000032800 00000 n 
+0000032901 00000 n 
+0000033002 00000 n 
+0000033111 00000 n 
+0000033225 00000 n 
+trailer << /Info 2 0 R /Root 1 0 R /Size 124 /ID [<a710260aaec53cb747fe1e9cb5addaa4><6bbb854ea50996f45922a55bf44a8abc>] >>
+startxref
+33342
+%%EOF

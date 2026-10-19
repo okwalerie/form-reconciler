@@ -1,0 +1,45 @@
+{
+  "warning": {
+    "form_shows_warning_when": [
+      "Hazardous materials on site is not None known",
+      "Prior hostile contact at site is Confirmed and Hazardous materials on site is None known"
+    ],
+    "spreadsheet_shows_warning_when": [
+      "Hazardous materials on site is Confirmed",
+      "Prior hostile contact at site is Confirmed and Hazardous materials on site is not Confirmed"
+    ],
+    "differs_exactly_when": "Prior hostile contact at site is not Confirmed and Hazardous materials on site is Possible or Likely",
+    "approval_rule_both": "supervisor approval is required whenever the warning is shown, or when overall risk is High or Extreme (same in both)"
+  },
+  "zz_L": {
+    "what": "the Likelihood section subtotal that the form's overall-risk calculation actually uses",
+    "form_weights_used_in_total": {
+      "Prior hostile contact at site": 1.0,
+      "Remote or hard-to-reach site": 3.0,
+      "Working alone": 5.0
+    },
+    "form_weights_shown_on_page": {
+      "Prior hostile contact at site": 10.0,
+      "Remote or hard-to-reach site": 3.0,
+      "Working alone": 5.0
+    },
+    "spreadsheet_weights": {
+      "Prior hostile contact at site": 10.0,
+      "Remote or hard-to-reach site": 3.0,
+      "Working alone": 5.0
+    },
+    "where": "a hidden helper value in the form's left margin, printed in white"
+  },
+  "unc_total": {
+    "spreadsheet_score_is_a_sum_of_per_answer_amounts": true,
+    "form_score_is_a_sum_of_per_answer_amounts": false,
+    "form_score_is_product_of_section_sums": true,
+    "note": "each side then turns its score into Low/Medium/High with its own cut-offs"
+  },
+  "sub_M": {
+    "form_lowest_mitigation_subtotal": 0.0,
+    "spreadsheet_lowest_mitigation_subtotal": 1.0,
+    "differs_exactly_when": "Check-in plan is In place and tested and Second person attending is In place and tested and Satellite communicator is In place and tested",
+    "visible_effect": "none today: overall risk is Low in these cases either way"
+  }
+}

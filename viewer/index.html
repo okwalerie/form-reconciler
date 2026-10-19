@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form viewer</title>
+<link rel="stylesheet" href="node_modules/pdfjs-dist/web/pdf_viewer.css">
+<style>
+  body { margin: 0; background: #555; }
+  #viewerContainer { position: absolute; inset: 0; overflow: auto; }
+</style>
+</head>
+<body>
+<div id="viewerContainer"><div id="viewer" class="pdfViewer"></div></div>
+<script type="module">
+  import * as pdfjsLib from "./node_modules/pdfjs-dist/build/pdf.mjs";
+  import { EventBus, PDFLinkService, PDFViewer, PDFScriptingManager } from "./node_modules/pdfjs-dist/web/pdf_viewer.mjs";
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "./node_modules/pdfjs-dist/build/pdf.worker.mjs";
+  const file = new URLSearchParams(location.search).get("file") || "../artifacts/field-visit-risk-assessment.pdf";
+
+  const container = document.getElementById("viewerContainer");
+  const eventBus = new EventBus();
+  const linkService = new PDFLinkService({ eventBus });
+  const scriptingManager = new PDFScriptingManager({
+    eventBus,
+    sandboxBundleSrc: "/viewer/node_modules/pdfjs-dist/build/pdf.sandbox.mjs",
+  });
+  const viewer = new PDFViewer({ container, eventBus, linkService, scriptingManager });
+  linkService.setViewer(viewer);
+  scriptingManager.setViewer(viewer);
+  const scale = new URLSearchParams(location.search).get("scale") || "page-width";
+  eventBus.on("pagesinit", () => { viewer.currentScaleValue = scale; });
+
+  const doc = await pdfjsLib.getDocument({ url: file, enableXfa: false }).promise;
+  viewer.setDocument(doc);
+  linkService.setDocument(doc, null);
+</script>
+</body>
+</html>

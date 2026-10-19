@@ -1,0 +1,34 @@
+{
+  "translation_model": "command-a-translate-08-2025",
+  "questions": [
+    {
+      "pdf_field": "warning",
+      "title": "When should the critical factor warning appear?",
+      "question": "The form and the spreadsheet disagree on when the single critical factor warning appears. They differ exactly when Prior hostile contact at site is not Confirmed, and Hazardous materials on site is Possible or Likely: the form shows the warning, and so requires supervisor approval; the spreadsheet does not. This affects 38% of possible assessments and changes the approval requirement for 29%. Which is intended? (a) The form: warn when hazardous materials is Possible or higher. (b) The spreadsheet: warn only when a critical factor is Confirmed. (c) Something else.",
+      "title_fr": "Quand l’avertissement de facteur critique unique devrait-il apparaître?",
+      "question_fr": "Le formulaire et le chiffrier ne s’entendent pas sur le moment où l’avertissement de facteur critique unique apparaît. Ils diffèrent précisément lorsque le contact hostile antérieur sur le site n’est pas confirmé et que les matières dangereuses sur le site sont possibles ou probables : le formulaire affiche l’avertissement et exige donc l’approbation du superviseur; le chiffrier ne l’exige pas. Cela touche 38 % des évaluations possibles et modifie l’exigence d’approbation pour 29 % d’entre elles. Quelle est l’intention? a) Le formulaire : avertir lorsque les matières dangereuses sont possibles ou plus. b) Le chiffrier : avertir uniquement lorsqu’un facteur critique est confirmé. c) Autre chose."
+    },
+    {
+      "pdf_field": "zz_L",
+      "title": "What weight should \"Prior hostile contact at site\" have?",
+      "question": "The form shows a weight of 10 for \"Prior hostile contact at site\", but its overall risk calculation uses a weight of 1 (from a hidden value in the margin). The spreadsheet uses 10. As a result, overall risk differs on 39% of possible assessments and supervisor approval on 6%. Which weight is intended? (a) 1. (b) 10. (c) Something else.",
+      "title_fr": "Quelle importance devrait avoir le facteur « Contact hostile antérieur sur le site »?",
+      "question_fr": "Le formulaire indique un poids de 10 pour « Contact hostile antérieur sur le site », mais son calcul du risque global utilise un poids de 1 (à partir d’une valeur cachée dans la marge). Le chiffrier utilise 10. En conséquence, le risque global diffère dans 39 % des évaluations possibles et l’approbation du superviseur dans 6 %. Quel poids est prévu? a) 1. b) 10. c) Autre chose."
+    },
+    {
+      "pdf_field": "unc_total",
+      "title": "How should the uncertainty level be calculated?",
+      "question": "The form calculates the uncertainty score by multiplying the Likelihood, Consequence and Mitigation totals. The spreadsheet adds the amounts for every answer. Each then uses its own cut-offs for Low, Medium and High, and the uncertainty level differs on 11% of possible assessments. Which method is intended? (a) Multiply the section totals, as the form does. (b) Add them, as the spreadsheet does. (c) Something else.",
+      "title_fr": "Comment le niveau d'incertitude devrait-il être calculé?",
+      "question_fr": "Le formulaire calcule le score d’incertitude en multipliant les totaux de la probabilité, de la conséquence et de l’atténuation. Le chiffrier additionne les montants pour chaque réponse. Chacun utilise ensuite ses propres seuils pour les niveaux faible, moyen et élevé, et le niveau d’incertitude diffère dans 11 % des évaluations possibles. Quelle méthode est prévue? a) Multiplier les totaux des sections, comme le fait le formulaire. b) Les additionner, comme le fait le chiffrier. c) Autre chose."
+    },
+    {
+      "pdf_field": "sub_M",
+      "latent": true,
+      "title": "Should the mitigation total have a minimum?",
+      "question": "When all three mitigation measures (Check-in plan, Second person attending, Satellite communicator) are In place and tested, the form's mitigation total is 0, while the spreadsheet never goes below 1. This affects 4,096 possible assessments and changes nothing the form shows today, because overall risk is Low either way. But a total of 0 cancels out every other answer, so a future change to the cut-offs could expose it. Is a minimum intended? (a) No minimum, as the form does. (b) A minimum of 1, as the spreadsheet does. (c) Something else.",
+      "title_fr": "Le total des mesures d’atténuation devrait-il avoir un minimum?",
+      "question_fr": "Lorsque les trois mesures d’atténuation (plan de communication, deuxième personne présente, communicateur satellite) sont toutes en place et testées, le total des mesures d’atténuation du formulaire est de 0, tandis que le chiffrier ne descend jamais en dessous de 1. Cela affecte 4 096 évaluations possibles et ne change rien à ce que le formulaire montre aujourd’hui, car le risque global est faible dans les deux cas. Mais un total de 0 annule toutes les autres réponses, donc un changement futur des seuils pourrait le révéler. Un minimum est-il prévu? a) Aucun minimum, comme le fait le formulaire. b) Un minimum de 1, comme le fait le chiffrier. c) Autre chose."
+    }
+  ]
+}
